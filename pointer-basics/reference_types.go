@@ -20,26 +20,26 @@ func modifyArray(a [3]string) {
 }
 
 func main() {
-	println("--- 1. スライス (Reference Type) ---")
+	fmt.Println("--- 1. スライス (Reference Type) ---")
 	// スライスは内部に「ポインタ」を持っているので、コピーしても参照先は同じ
 	mySlice := []string{"Original", "Data"}
 	fmt.Printf("呼び出し前: %v\n", mySlice)
 	modifySlice(mySlice)
 	fmt.Printf("呼び出し後: %v (値渡しなのに中身が変わる！)\n", mySlice)
 
-	println("\n--- 2. 配列 (Value Type) ---")
+	fmt.Println("\n--- 2. 配列 (Value Type) ---")
 	// 配列 (長さ固定) は値そのものなので、コピーされる
 	myArray := [3]string{"Original", "Data", "End"}
 	fmt.Printf("呼び出し前: %v\n", myArray)
 	modifyArray(myArray)
 	fmt.Printf("呼び出し後: %v (変わりません)\n", myArray)
 
-	println("\n--- 3. マップ (Reference Type) ---")
+	fmt.Println("\n--- 3. マップ (Reference Type) ---")
 	// マップも内部等はポインタのようなもの
 	myMap := map[string]int{"score": 10}
 	fmt.Printf("呼び出し前: %v\n", myMap)
 	modifyMap(myMap)
 	fmt.Printf("呼び出し後: %v (変わります！)\n", myMap)
 
-	println("\n★ まとめ: スライスとマップは `*` を付けなくてもポインタのような挙動をします")
+	fmt.Println("\n★ まとめ: スライスとマップは `*` を付けなくてもポインタのような挙動をします")
 }

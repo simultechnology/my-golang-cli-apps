@@ -16,7 +16,7 @@ func doublePointer(ptr *int) {
 }
 
 func main() {
-	println("--- 1. 値渡し (Pass by Value) の実験 ---")
+	fmt.Println("--- 1. 値渡し (Pass by Value) の実験 ---")
 	score := 100
 	fmt.Printf("呼び出し前: %d\n", score)
 
@@ -24,7 +24,7 @@ func main() {
 
 	fmt.Printf("呼び出し後: %d (変わっていません！)\n", score)
 
-	println("\n--- 2. ポインタ渡し (Pass by Pointer) の実験 ---")
+	fmt.Println("\n--- 2. ポインタ渡し (Pass by Pointer) の実験 ---")
 	fmt.Printf("呼び出し前: %d\n", score)
 
 	doublePointer(&score) // scoreの「住所」を渡す

@@ -25,11 +25,11 @@ func main() {
 	gameCharacter := Person{Name: "Mario", Age: 30}
 	fmt.Printf("初期状態: %+v\n", gameCharacter)
 
-	println("\n--- 1. 値レシーバの実験 ---")
+	fmt.Println("\n--- 1. 値レシーバの実験 ---")
 	gameCharacter.HaveBirthdayValue()
 	fmt.Printf("呼び出し後: %+v (歳をとっていません！)\n", gameCharacter)
 
-	println("\n--- 2. ポインタレシーバの実験 ---")
+	fmt.Println("\n--- 2. ポインタレシーバの実験 ---")
 	// Go言語の便利機能: ポインタレシーバでも、通常の変数から直接呼び出せます
 	// コンパイラが自動的に (&gameCharacter).HaveBirthdayPointer() と解釈してくれます
 	gameCharacter.HaveBirthdayPointer()
