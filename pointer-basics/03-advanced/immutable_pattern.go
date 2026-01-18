@@ -44,6 +44,12 @@ func main() {
 	fmt.Printf("3. Add実行後:\n")
 	fmt.Printf("   next が直接書き換わりました: %+v\n", next)
 
+	// コンパイラが勝手に (&next).Add(...) と解釈してくれる
+	next.Add(100, 100)
+
+	fmt.Printf("4. 更にAdd実行後:\n")
+	fmt.Printf("   next が直接書き換わりました: %+v\n", next)
+
 	fmt.Println("\n★ 解説:")
 	fmt.Println("  - Move のような「値レシーバ」で新しい値を返す設計は、")
 	fmt.Println("    「いつの間にかデータが変わっていた」というバグを防げます。")

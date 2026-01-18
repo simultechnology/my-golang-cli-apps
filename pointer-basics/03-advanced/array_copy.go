@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	println("--- 1. 配列の代入 (Full Copy) ---")
+	fmt.Println("--- 1. 配列の代入 (Full Copy) ---")
 	// 配列 (長さ固定)
 	original := [3]string{"A", "B", "C"}
 
@@ -19,7 +19,7 @@ func main() {
 	fmt.Printf("original[0]: %s (元のデータは安全保たれます)\n", original[0])
 	fmt.Printf("copied[0]  : %s\n", copied[0])
 
-	println("\n--- 2. 関数への受け渡し (Copy) ---")
+	fmt.Println("\n--- 2. 関数への受け渡し (Copy) ---")
 	testArrayArg(original)
 	fmt.Printf("関数呼び出し後の original[0]: %s (変わっていません)\n", original[0])
 }

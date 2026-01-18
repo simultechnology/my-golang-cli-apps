@@ -35,6 +35,7 @@ go run main.go
 | --- | --- | --- |
 | `03-advanced/immutable_pattern.go` | **不変性 (Immutability)** | あえて「値レシーバ」を使い、変更ではなく「新しい値を返す」ことで安全性を高めるパターン。 |
 | `03-advanced/slice_internals.go` | **スライスの正体** | スライスは「ポインタ・長さ・容量」の3点セット。`append` で容量発生(realloc)するとポインタが変わる罠について。 |
+| `03-advanced/slice_pointer.go` | **スライスのポインタ** | `*[]int` を渡して `append` する裏技。 |
 | `03-advanced/array_copy.go` | **配列の正体** | Goの配列 `[N]T` はただの「巨大な値」。代入や関数渡しで全要素がコピーされる（C言語のポインタとは違う）。 |
 
 ## 重要なコンセプトまとめ
