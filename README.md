@@ -20,6 +20,20 @@ cd english-words-viewer
 go run main.go
 ```
 
+### pointer-basics
+
+Go言語のポインタ、スライス、配列の挙動を学ぶための実験コード集
+- 値渡し vs ポインタ渡し
+- スライスと配列の内部構造の違い
+- メソッドレシーバの使い分け
+
+**使い方:**
+```bash
+cd pointer-basics/01-basics
+# 各ファイルを個別に実行
+go run main.go
+```
+
 ## 必要環境
 
 - Go 1.x以上
